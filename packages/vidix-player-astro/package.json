@@ -4,22 +4,12 @@
   "description": "Astro component for the vidix-player web component (SSR skeleton + zero-layout-shift hydration)",
   "license": "Apache-2.0",
   "type": "module",
-  "files": [
-    "src",
-    "README.md",
-    "LICENSE"
-  ],
+  "files": ["src", "README.md", "LICENSE"],
   "exports": {
     ".": "./src/index.ts",
     "./package.json": "./package.json"
   },
-  "keywords": [
-    "astro-component",
-    "video",
-    "player",
-    "vidix",
-    "web-component"
-  ],
+  "keywords": ["astro-component", "video", "player", "vidix", "web-component"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mekbrutcom/vidix-player.git",

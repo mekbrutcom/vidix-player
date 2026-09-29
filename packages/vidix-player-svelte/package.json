@@ -4,11 +4,7 @@
   "description": "Svelte component for the vidix-player web component",
   "license": "Apache-2.0",
   "type": "module",
-  "files": [
-    "src",
-    "README.md",
-    "LICENSE"
-  ],
+  "files": ["src", "README.md", "LICENSE"],
   "exports": {
     ".": {
       "types": "./src/index.ts",
@@ -17,14 +13,7 @@
     "./package.json": "./package.json"
   },
   "svelte": "./src/index.ts",
-  "keywords": [
-    "svelte",
-    "svelte-component",
-    "video",
-    "player",
-    "vidix",
-    "web-component"
-  ],
+  "keywords": ["svelte", "svelte-component", "video", "player", "vidix", "web-component"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mekbrutcom/vidix-player.git",

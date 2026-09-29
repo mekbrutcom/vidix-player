@@ -4,10 +4,7 @@
   "description": "Framework-agnostic video player web component (core)",
   "license": "Apache-2.0",
   "type": "module",
-  "sideEffects": [
-    "./dist/vidix-player-full.js",
-    "./dist/vidix-player-full.cjs"
-  ],
+  "sideEffects": ["./dist/vidix-player-full.js", "./dist/vidix-player-full.cjs"],
   "main": "./dist/vidix-player.cjs",
   "module": "./dist/vidix-player.js",
   "browser": "./dist/vidix-player.js",
@@ -27,11 +24,7 @@
     },
     "./package.json": "./package.json"
   },
-  "files": [
-    "dist",
-    "README.md",
-    "LICENSE"
-  ],
+  "files": ["dist", "README.md", "LICENSE"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mekbrutcom/vidix-player.git",

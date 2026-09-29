@@ -4,11 +4,7 @@
   "description": "React component for the vidix-player web component",
   "license": "Apache-2.0",
   "type": "module",
-  "files": [
-    "dist",
-    "README.md",
-    "LICENSE"
-  ],
+  "files": ["dist", "README.md", "LICENSE"],
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -20,13 +16,7 @@
     },
     "./package.json": "./package.json"
   },
-  "keywords": [
-    "react",
-    "video",
-    "player",
-    "vidix",
-    "web-component"
-  ],
+  "keywords": ["react", "video", "player", "vidix", "web-component"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mekbrutcom/vidix-player.git",

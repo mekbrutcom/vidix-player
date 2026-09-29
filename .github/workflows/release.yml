@@ -13,9 +13,10 @@
 #    npm version. Keep the release tag in sync with the package versions
 #    (`v<version>`, e.g. `v0.1.0`).
 #
-# Required secret: `NPM_TOKEN` — an npm Automation token with publish rights
-# for the `@mekbrut-com` scope. Configure it in
-# Settings -> Secrets and variables -> Actions before the first run.
+# Authentication: npm Trusted Publishing (OIDC) — no registry secret. Each of
+# the five packages has a trusted publisher configured on npmjs.com for this
+# workflow file; `id-token: write` lets the job mint the short-lived OIDC token,
+# and the registry attaches provenance attestations automatically.
 #
 # Publish order matters (dependencies must exist before dependents):
 # shared -> core -> react -> astro -> svelte.

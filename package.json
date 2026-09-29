@@ -1,7 +1,7 @@
 {
   "name": "vidix-player-monorepo",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "vidix-player monorepo: framework-agnostic video player (vanilla, Astro, React, Svelte)",
   "license": "Apache-2.0",
   "type": "module",

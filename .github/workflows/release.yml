@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      # OIDC token: required by `pnpm publish --provenance` (npm build attestation).
+      # OIDC: npm Trusted Publishing (tokenless publish + automatic provenance).
       id-token: write
     # Required reviewers gate (repo environment "npm-release"): every publish run
     # waits for an approval before any build/publish step executes.
@@ -59,7 +59,6 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
-          registry-url: https://registry.npmjs.org
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -87,45 +86,35 @@ jobs:
       # `--no-git-checks`: the release event checks out a tag (detached HEAD),
       # which pnpm's default branch check would reject.
 
-      # NODE_AUTH_TOKEN is deliberately step-scoped: only these publish steps may
-      # see the npm credential — never setup, install, or build steps (audit
-      # release.yml:NPM_TOKEN:job-scope-exposure-to-third-party-code).
+      # No registry credential is used: pnpm >=10 authenticates via npm Trusted
+      # Publishing (OIDC) because id-token: write is granted and each package has
+      # a trusted publisher configured for this workflow file.
       - name: Publish @mekbrut-com/vidix-player-shared
         # Publish only from the release path or an explicit tag, never from a
         # workflow_dispatch run on an arbitrary branch ref.
         if: github.event_name == 'release' || startsWith(github.ref, 'refs/tags/')
-        run: pnpm --filter @mekbrut-com/vidix-player-shared publish --provenance --access public --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm --filter @mekbrut-com/vidix-player-shared publish --access public --no-git-checks
 
       - name: Publish @mekbrut-com/vidix-player (core)
         # Publish only from the release path or an explicit tag, never from a
         # workflow_dispatch run on an arbitrary branch ref.
         if: github.event_name == 'release' || startsWith(github.ref, 'refs/tags/')
-        run: pnpm --filter @mekbrut-com/vidix-player publish --provenance --access public --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm --filter @mekbrut-com/vidix-player publish --access public --no-git-checks
 
       - name: Publish @mekbrut-com/vidix-player-react
         # Publish only from the release path or an explicit tag, never from a
         # workflow_dispatch run on an arbitrary branch ref.
         if: github.event_name == 'release' || startsWith(github.ref, 'refs/tags/')
-        run: pnpm --filter @mekbrut-com/vidix-player-react publish --provenance --access public --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm --filter @mekbrut-com/vidix-player-react publish --access public --no-git-checks
 
       - name: Publish @mekbrut-com/vidix-player-astro
         # Publish only from the release path or an explicit tag, never from a
         # workflow_dispatch run on an arbitrary branch ref.
         if: github.event_name == 'release' || startsWith(github.ref, 'refs/tags/')
-        run: pnpm --filter @mekbrut-com/vidix-player-astro publish --provenance --access public --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm --filter @mekbrut-com/vidix-player-astro publish --access public --no-git-checks
 
       - name: Publish @mekbrut-com/vidix-player-svelte
         # Publish only from the release path or an explicit tag, never from a
         # workflow_dispatch run on an arbitrary branch ref.
         if: github.event_name == 'release' || startsWith(github.ref, 'refs/tags/')
-        run: pnpm --filter @mekbrut-com/vidix-player-svelte publish --provenance --access public --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm --filter @mekbrut-com/vidix-player-svelte publish --access public --no-git-checks

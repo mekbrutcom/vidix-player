@@ -566,9 +566,9 @@ Astro จะ inline critical CSS ลงใน skeleton SSR ของตัวเ
 
 ## รายงานบั๊กและช่องโหว่ด้านความปลอดภัย
 
-พบบั๊ก? โปรด [เปิด issue](placeholder-link)
+พบบั๊ก? โปรด [เปิด issue](https://github.com/mekbrutcom/vidix-player/issues)
 
-พบช่องโหว่ด้านความปลอดภัย? [รายงานเป็นส่วนตัว](placeholder-link)
+พบช่องโหว่ด้านความปลอดภัย? [รายงานเป็นส่วนตัว](https://mekbrut.com/contact/bug-report)
 
 สำหรับช่องโหว่ด้านความปลอดภัย **ห้ามเปิด issue สาธารณะ** ติดต่อเราผ่าน
 ลิงก์ "รายงานเป็นส่วนตัว" ด้านบน หรือผ่านอีเมลที่ระบุไว้ในโปรไฟล์ GitHub

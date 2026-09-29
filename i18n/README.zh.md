@@ -548,9 +548,9 @@ critical CSS 内联到其 SSR 骨架中，因此它不检查 strict CSP（见
 
 ## 报告 bug 与安全漏洞
 
-发现 bug？请[打开 issue](placeholder-link)。
+发现 bug？请[打开 issue](https://github.com/mekbrutcom/vidix-player/issues)。
 
-发现安全漏洞？请[私下报告](placeholder-link)。
+发现安全漏洞？请[私下报告](https://mekbrut.com/contact/bug-report)。
 
 对于安全漏洞，**不要打开公开的 issue**。请通过上方的"私下报告"链接
 或此 GitHub 配置文件上列出的电子邮件联系我们。我们会将其转发给安全

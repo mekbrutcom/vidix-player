@@ -564,9 +564,9 @@ vanilla का `csp-tt.spec.ts` सख़्त-CSP गेट है; Astro wrap
 
 ## बग और सुरक्षा भेद्यताएँ रिपोर्ट करें
 
-बग मिला? कृपया [issue खोलें](placeholder-link)।
+बग मिला? कृपया [issue खोलें](https://github.com/mekbrutcom/vidix-player/issues)।
 
-सुरक्षा भेद्यता मिली? [निजी तरीके से रिपोर्ट करें](placeholder-link)।
+सुरक्षा भेद्यता मिली? [निजी तरीके से रिपोर्ट करें](https://mekbrut.com/contact/bug-report)।
 
 सुरक्षा भेद्यताओं के लिए, **सार्वजनिक issue न खोलें**। ऊपर दिए "निजी तरीके से
 रिपोर्ट करें" लिंक से या इस GitHub प्रोफ़ाइल पर दिए गए ईमेल से हमसे संपर्क

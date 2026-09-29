@@ -555,9 +555,9 @@ critical CSS di skeleton SSR-nya, jadi ia tidak memeriksa strict CSP (lihat
 
 ## Laporkan bug dan celah keamanan
 
-Menemukan bug? Silakan [open issue](placeholder-link).
+Menemukan bug? Silakan [open issue](https://github.com/mekbrutcom/vidix-player/issues).
 
-Menemukan celah keamanan? [Laporkan secara privat](placeholder-link).
+Menemukan celah keamanan? [Laporkan secara privat](https://mekbrut.com/contact/bug-report).
 
 Untuk celah keamanan, **jangan open issue secara publik**. Hubungi kami melalui
 tautan "Laporkan secara privat" di atas atau melalui email yang tercantum di profil github ini. Kami akan meneruskan ke tim keamanan untuk

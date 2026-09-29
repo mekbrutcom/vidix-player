@@ -572,9 +572,9 @@ inline do CSS crítico no seu esqueleto SSR, então ele não verifica CSP estrit
 
 ## Relatar bugs e vulnerabilidades de segurança
 
-Encontrou um bug? Por favor [abra um issue](placeholder-link).
+Encontrou um bug? Por favor [abra um issue](https://github.com/mekbrutcom/vidix-player/issues).
 
-Encontrou uma vulnerabilidade de segurança? [Relate em privado](placeholder-link).
+Encontrou uma vulnerabilidade de segurança? [Relate em privado](https://mekbrut.com/contact/bug-report).
 
 Para vulnerabilidades de segurança, **não abra um issue público**. Entre em
 contato conosco através do link "Relate em privado" acima ou através do email

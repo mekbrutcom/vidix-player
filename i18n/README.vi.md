@@ -565,9 +565,9 @@ CSS vào skeleton SSR của nó, nên nó không kiểm tra strict CSP (xem
 
 ## Báo cáo lỗi và lỗ hổng bảo mật
 
-Tìm thấy lỗi? Vui lòng [mở một issue](placeholder-link).
+Tìm thấy lỗi? Vui lòng [mở một issue](https://github.com/mekbrutcom/vidix-player/issues).
 
-Tìm thấy lỗ hổng bảo mật? [Báo cáo riêng tư](placeholder-link).
+Tìm thấy lỗ hổng bảo mật? [Báo cáo riêng tư](https://mekbrut.com/contact/bug-report).
 
 Đối với lỗ hổng bảo mật, **không mở issue công khai**. Liên hệ với chúng tôi
 qua liên kết "Báo cáo riêng tư" ở trên hoặc qua email được liệt kê trên hồ sơ

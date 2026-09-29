@@ -574,9 +574,9 @@ estricto (ver `packages/vidix-player-astro/README.md`).
 
 ## Informar de bugs y vulnerabilidades de seguridad
 
-¿Encontraste un bug? Por favor [abre un issue](placeholder-link).
+¿Encontraste un bug? Por favor [abre un issue](https://github.com/mekbrutcom/vidix-player/issues).
 
-¿Encontraste una vulnerabilidad de seguridad? [Infórmala de forma privada](placeholder-link).
+¿Encontraste una vulnerabilidad de seguridad? [Infórmala de forma privada](https://mekbrut.com/contact/bug-report).
 
 Para vulnerabilidades de seguridad, **no abras un issue público**. Contáctanos
 a través del enlace "Infórmala de forma privada" de arriba o a través del

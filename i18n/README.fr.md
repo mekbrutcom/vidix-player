@@ -576,9 +576,9 @@ le CSS critique dans son squelette SSR, il ne vérifie donc pas le CSP strict
 
 ## Signaler des bugs et des failles de sécurité
 
-Vous avez trouvé un bug ? Merci d'[ouvrir un issue](placeholder-link).
+Vous avez trouvé un bug ? Merci d'[ouvrir un issue](https://github.com/mekbrutcom/vidix-player/issues).
 
-Vous avez trouvé une faille de sécurité ? [Signalez-la en privé](placeholder-link).
+Vous avez trouvé une faille de sécurité ? [Signalez-la en privé](https://mekbrut.com/contact/bug-report).
 
 Pour les failles de sécurité, **n'ouvrez pas d'issue public**. Contactez-nous
 via le lien « Signalez-la en privé » ci-dessus ou via l'email listé sur ce

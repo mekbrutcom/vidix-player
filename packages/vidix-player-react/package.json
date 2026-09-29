@@ -1,0 +1,44 @@
+{
+  "name": "@mekbrut-com/vidix-player-react",
+  "version": "0.1.0",
+  "description": "React component for the vidix-player web component",
+  "license": "Apache-2.0",
+  "type": "module",
+  "files": ["dist", "README.md", "LICENSE"],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "keywords": ["react", "video", "player", "vidix", "web-component"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mekbrutcom/vidix-player.git",
+    "directory": "packages/vidix-player-react"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mekbrut-com/vidix-player": "workspace:*",
+    "@mekbrut-com/vidix-player-shared": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.9.3"
+  }
+}

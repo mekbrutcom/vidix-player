@@ -1,0 +1,7 @@
+packages:
+  - "packages/*"
+  - "e2e"
+  - "e2e/astro-app"
+  - "e2e/react-app"
+  - "e2e/svelte-app"
+  - "e2e/vanillajs-app"

@@ -1,0 +1,18 @@
+/**
+ * Typechecking for the source-shipping Svelte wrapper.
+ *
+ * `svelte-check` compiles the `.svelte` component, so — like the Astro wrapper
+ * — there is no `tsc` step and no `dist/`. `verbatimModuleSyntax` is required by
+ * the Svelte 5 language tooling; every type import in `src` uses `import type`.
+ */
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "moduleResolution": "bundler",
+    "target": "ES2021",
+    "module": "ESNext",
+    "verbatimModuleSyntax": true,
+    "noEmit": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.svelte"]
+}

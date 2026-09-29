@@ -1,0 +1,14 @@
+/**
+ * The wrapper ships uncompiled `.astro` + `.ts`, so typechecking happens through
+ * `astro check` (plain `tsc` cannot resolve `.astro` imports). Astro's own
+ * tsconfig provides the `.astro` module declarations.
+ */
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "moduleResolution": "bundler",
+    "target": "ES2021",
+    "noEmit": true
+  },
+  "include": ["src"]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "vidix-player-svelte-e2e",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Svelte SSR + hydration parity page for the vidix-player-svelte component (not published)",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm run build:client && pnpm run build:server",
+    "build:client": "vite build --outDir dist/client",
+    "build:server": "vite build --ssr src/entry-server.ts --outDir dist/server",
+    "preview": "node ./server.mjs",
+    "typecheck": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "dependencies": {
+    "svelte": "^5.57.1",
+    "@mekbrut-com/vidix-player": "workspace:*",
+    "@mekbrut-com/vidix-player-svelte": "workspace:*"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^7.3.0",
+    "svelte-check": "^4.7.6",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.0"
+  }
+}

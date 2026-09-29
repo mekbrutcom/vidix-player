@@ -1,0 +1,16 @@
+/**
+ * Typechecking for the compiled React wrapper.
+ *
+ * `jsx: "react-jsx"` so the component ships no `import React` boilerplate while
+ * staying compatible with React 18 and 19 (both provide `react/jsx-runtime`).
+ */
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "jsx": "react-jsx",
+    "noEmit": true
+  },
+  "include": ["src"]
+}

@@ -1,0 +1,6 @@
+# The published tarball only contains package.json "files" entries
+# (src, README.md, LICENSE). This file is the belt-and-braces guard that keeps
+# dev-only config out if "files" is ever widened.
+*
+!src
+!src/**

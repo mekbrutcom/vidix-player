@@ -1,0 +1,40 @@
+{
+  "name": "@mekbrut-com/vidix-player",
+  "version": "0.1.0",
+  "description": "Framework-agnostic video player web component (core)",
+  "license": "Apache-2.0",
+  "type": "module",
+  "sideEffects": ["./dist/vidix-player-full.js", "./dist/vidix-player-full.cjs"],
+  "main": "./dist/vidix-player.cjs",
+  "module": "./dist/vidix-player.js",
+  "browser": "./dist/vidix-player.js",
+  "types": "./dist/vidix-player.d.ts",
+  "jsdelivr": "./dist/vidix-player.iife.js",
+  "unpkg": "./dist/vidix-player.iife.js",
+  "exports": {
+    ".": {
+      "types": "./dist/vidix-player.d.ts",
+      "import": "./dist/vidix-player.js",
+      "require": "./dist/vidix-player.cjs"
+    },
+    "./full": {
+      "types": "./dist/vidix-player-full.d.ts",
+      "import": "./dist/vidix-player-full.js",
+      "require": "./dist/vidix-player-full.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mekbrutcom/vidix-player.git",
+    "directory": "packages/vidix-player"
+  },
+  "scripts": {
+    "build": "tsup && tsup --config tsup.config.iife.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

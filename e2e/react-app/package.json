@@ -1,0 +1,26 @@
+{
+  "name": "vidix-player-react-e2e",
+  "version": "0.1.0",
+  "private": true,
+  "description": "React SSR + hydration parity page for the vidix-player-react component (not published)",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm run build:client && pnpm run build:server",
+    "build:client": "vite build --outDir dist/client",
+    "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",
+    "preview": "node ./server.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "@mekbrut-com/vidix-player": "workspace:*",
+    "@mekbrut-com/vidix-player-react": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.0"
+  }
+}

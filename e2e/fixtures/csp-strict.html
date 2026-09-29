@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>vidix-player e2e — strict CSP + Trusted Types</title>
+    <!--
+      Strict CSP on purpose: style-src 'self' WITHOUT 'unsafe-inline', plus
+      Trusted Types enforcement. The core must render fully styled through
+      adoptedStyleSheets and produce zero Trusted Types violations.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src *; script-src 'self'; style-src 'self'; img-src * data: blob:; frame-src *; media-src *; connect-src *; font-src *; require-trusted-types-for 'script';"
+    />
+    <script type="module" src="/dist/vidix-player.js"></script>
+  </head>
+  <body>
+    <main>
+      <vidix-player
+        playback-id="vod-1_parameter_server"
+        lang="en"
+        accent-color="green"
+        control-share="true"
+        control-server-count="3"
+        control-download="true"
+        loading="eager"
+        role="region"
+        aria-label="Video player"
+      ></vidix-player>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "vidix-player-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "vidix-player monorepo: framework-agnostic video player (vanilla, Astro, React, Svelte)",
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm --filter \"./packages/*\" run build",
+    "typecheck": "pnpm --filter \"./packages/*\" run typecheck",
+    "lint": "biome check packages e2e",
+    "format": "biome format --write packages e2e",
+    "test:e2e": "pnpm --filter e2e run test"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.0",
+    "tsup": "^8.3.5"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=18"
+  }
+}

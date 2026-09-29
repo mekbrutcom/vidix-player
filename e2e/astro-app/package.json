@@ -1,0 +1,21 @@
+{
+  "name": "vidix-player-astro-e2e",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Astro parity page for the vidix-player-astro component (not published)",
+  "type": "module",
+  "scripts": {
+    "build": "astro build",
+    "preview": "node ./server.mjs",
+    "typecheck": "astro check"
+  },
+  "dependencies": {
+    "astro": "^7.3.3",
+    "@mekbrut-com/vidix-player": "workspace:*",
+    "@mekbrut-com/vidix-player-astro": "workspace:*"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "typescript": "^5.9.3"
+  }
+}

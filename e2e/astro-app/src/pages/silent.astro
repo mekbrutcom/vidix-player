@@ -1,0 +1,30 @@
+---
+/**
+ * Single player with diagnostics off. Used by the parity spec to prove
+ * `consoleLog={false}` really is silent — on the two-player page the log lines
+ * are not attributable to a specific player.
+ */
+
+import { VidixPlayer } from "@mekbrut-com/vidix-player-astro";
+
+const thumbnail = "https://files.vidstack.io/sprite-fight/poster.webp";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>vidix-player | silent (Astro)</title>
+  </head>
+  <body>
+    <main>
+      <VidixPlayer
+        playbackId="vod-1_parameter_server"
+        metadata={{ videoTitle: "Test VOD", thumbnailUrl: thumbnail }}
+        control={{ share: true, serverCount: 3, download: true }}
+        consoleLog={false}
+      />
+    </main>
+  </body>
+</html>

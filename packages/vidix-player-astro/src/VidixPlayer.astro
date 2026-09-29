@@ -1,0 +1,56 @@
+---
+/**
+ * `<VidixPlayer>` — SSR-friendly Astro wrapper around the `<vidix-player>` web
+ * component.
+ *
+ * The server renders a Declarative Shadow DOM skeleton (critical CSS + the 16:9
+ * box and control bar), so the player reserves its exact final geometry before
+ * any JavaScript loads (CLS ≈ 0). A hoisted `<script>` then registers the core,
+ * and hydration replaces the shadow content in place — same box, richer content.
+ *
+ * Parity with the core is structural, not duplicated: the skeleton markup comes
+ * from `buildShellTemplate()` and the CSS from `CRITICAL_STYLE`, both imported
+ * from `@mekbrut-com/vidix-player`.
+ */
+
+import {
+  buildAttributes,
+  createShimElement,
+  resolveBlurUpSource,
+} from "@mekbrut-com/vidix-player-shared";
+import type { VidixPlayerProps } from "@mekbrut-com/vidix-player-shared";
+
+import { CRITICAL_STYLE, buildShellTemplate } from "@mekbrut-com/vidix-player";
+import type { VidixPlayerElement } from "@mekbrut-com/vidix-player";
+
+export interface Props extends VidixPlayerProps {}
+
+const props = Astro.props;
+
+const attributes = buildAttributes(props);
+
+// The blur-up source is the poster itself, passed through raw. The core's
+// blur-up <img> and the share-dialog thumbnail validate it themselves, so the
+// attribute must stay a plain image URL.
+const blurUpSource = resolveBlurUpSource(props);
+if (blurUpSource !== undefined) {
+  attributes["metadata-thumbnail-url"] = blurUpSource;
+}
+
+// Render the skeleton with the core's own builder against a Map-backed shim,
+// keeping pre-JS and post-hydration markup 1:1.
+const skeleton = buildShellTemplate(createShimElement(attributes) as unknown as VidixPlayerElement);
+const shadowContent = `<style>${CRITICAL_STYLE}</style>${skeleton}`;
+---
+
+<vidix-player {...attributes}><template shadowrootmode="open" set:html={shadowContent} /></vidix-player>
+
+<script>
+  // Hoisted and bundled once per page. `@mekbrut-com/vidix-player/full`
+  // statically registers its hydrate function, so the shell never fetches the
+  // runtime bundle.
+  import "@mekbrut-com/vidix-player/full";
+  import { defineVidixPlayer } from "@mekbrut-com/vidix-player";
+
+  defineVidixPlayer();
+</script>

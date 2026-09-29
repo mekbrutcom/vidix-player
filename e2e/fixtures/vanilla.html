@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>vidix-player e2e — vanilla</title>
+    <style>
+      body { margin: 0; padding: 1rem; font-family: system-ui, sans-serif; }
+    </style>
+    <!-- Loads the built shell exactly like the CDN tag would. -->
+    <script type="module" src="/dist/vidix-player.js"></script>
+  </head>
+  <body>
+    <main>
+      <vidix-player
+        playback-id="vod-1_parameter_server"
+        lang="en"
+        accent-color="green"
+        layout-control-position="bottom"
+        layout-control-accent="red"
+        metadata-server-title="true"
+        metadata-video-title="Test VOD"
+        metadata-thumbnail-url="https://files.vidstack.io/sprite-fight/poster.webp"
+        control-share="true"
+        control-server-count="3"
+        control-download="true"
+        loading="eager"
+        role="region"
+        aria-label="Video player"
+      ></vidix-player>
+    </main>
+  </body>
+</html>

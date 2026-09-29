@@ -1,0 +1,10 @@
+{
+  "name": "vidix-player-vanillajs-e2e",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Vanilla JS parity page for the vidix-player core (human QA, not published)",
+  "type": "module",
+  "scripts": {
+    "preview": "node ./server.mjs"
+  }
+}

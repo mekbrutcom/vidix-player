@@ -1,0 +1,42 @@
+{
+  "name": "@mekbrut-com/vidix-player-shared",
+  "version": "0.1.0",
+  "description": "Shared prop/attribute/image helpers for the vidix-player framework wrappers",
+  "license": "Apache-2.0",
+  "type": "module",
+  "files": ["dist", "README.md", "LICENSE"],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "keywords": ["vidix", "video", "player", "web-component"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mekbrutcom/vidix-player.git",
+    "directory": "packages/vidix-player-shared"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@mekbrut-com/vidix-player": ">=0.1.0"
+  },
+  "peerDependenciesMeta": {
+    "@mekbrut-com/vidix-player": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@mekbrut-com/vidix-player": "workspace:*"
+  }
+}

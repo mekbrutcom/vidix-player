@@ -1,0 +1,28 @@
+# Internal
+.internal-note
+workers
+.kilo
+scaffold-design
+
+# wrangler files
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
+
+# credentials (never commit)
+.npmrc
+*.pem
+*.key
+
+# dependencies
+node_modules
+
+# build output
+dist
+.astro
+*.tsbuildinfo
+
+# test artifacts
+playwright-report
+test-results

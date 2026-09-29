@@ -60,6 +60,12 @@ jobs:
           node-version: 22
           cache: pnpm
 
+      # pnpm publish runs the local npm CLI under the hood; npm Trusted
+      # Publishing (OIDC) needs npm >= 11.5.1 — the runner default on node 22
+      # is npm 10, which cannot exchange the OIDC token (ENEEDAUTH).
+      - name: Install npm with Trusted Publishing support
+        run: npm install -g npm@11.20.0
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
